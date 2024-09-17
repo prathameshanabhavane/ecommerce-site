@@ -2,9 +2,9 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 import './Header.scss';
 
 const Header  = () => {
@@ -26,9 +26,12 @@ const Header  = () => {
                             />
                             <Button variant="outline-success">Search</Button>
                         </Form>
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Products</Nav.Link>
-                        <Nav.Link href="#link">Cart</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/products">Products</Nav.Link>
+                        <Nav.Link href="/cart">Cart</Nav.Link>
+                        {/* <Link to="">Home</Link>
+                        <Link to="/prodcuts">Products</Link>
+                        <Link to="/cart">Cart</Link> */}
                     </Nav>
                     </Navbar.Collapse>
                 </Container>
