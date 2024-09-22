@@ -1,14 +1,21 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import './ProductDetail.scss';
+import { useCart } from '../../Context/CartContext';
 
 const ProductDetail = () => {
     let { id } = useParams();
     const [productDeatil, setProductDeatil] = useState([])
     const [error, setError] = useState('');
+    const navigate = useNavigate();
+    const { dispatch } = useCart();
+
+    // console.log('useCart', dispatch)
+
+    console.log(navigate);
 
     const { title, image, price, rating, category, description} = productDeatil;
 
@@ -18,13 +25,21 @@ const ProductDetail = () => {
             .then(res=>res.json())
             .then(data=>setProductDeatil(data))
             .catch(err =>setError(err))
-    }, [])
+    }, [id])
 
-    const addToCart = (id) => {
-        console.log('cart', id);
-    }
+    // const addToCart = (id, product) => {
+    //     console.log('cart', id);
+    //     console.log(product);
+    //     const jsonProduct = JSON.stringify(product)
+    //     localStorage.setItem('cartProduct', jsonProduct)
+    // }
 
-    console.log(productDeatil);
+    const addToCart = () => {
+        dispatch({ type: 'ADD_TO_CART', payload: productDeatil });
+        navigate('/cart'); // Redirect to cart
+    };
+
+    // console.log(productDeatil);
 
     return(
         <>  
@@ -59,7 +74,7 @@ const ProductDetail = () => {
                                     </svg>
                                     {/* <span>({rating.count})</span> */}
                                 </div>
-                                 <button onClick={() => {addToCart(id)}}>Add To Cart</button>
+                                 <button onClick={addToCart}>Add To Cart</button>
                             </div>
                         </div>
                     </Container>

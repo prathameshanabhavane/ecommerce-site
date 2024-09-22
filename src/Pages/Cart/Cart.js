@@ -3,35 +3,28 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Products from '../../Components/Products/Products';
 import { useState,  useEffect } from 'react';
+import { useCart } from '../../Context/CartContext';
 
 const Cart = () => {
     const [products, setProducts] = useState([])
+    const { cart, dispatch } = useCart();
 
-    useEffect(() => {
-        fetch('https://fakestoreapi.com/carts/user/3')
-            .then(res=>res.json())
-            .then(data=> data.map( product => {
-                let productArray = product.products;
+    // console.log('cartProduct', cart)
 
-                productArray.map(ele => {
-                    console.log(ele.productId)
-
-                })
-            }))
-
-    }, [products])
-
-    console.log(products);
+    const removeProductCart = (item) => {
+        dispatch({ type: 'REMOVE_FROM_CART', payload: item });
+    };
 
     return(
         <>
             <div className="home-page page">
                 <Container>
                     <Row>
-                        {products.map(product => {
+                        {cart.map(product => {
                             return(
                                 <Col key={product.id} sm={6} md={4} lg={3}>
                                     <Products product={product} />
+                                    <button onClick={() => removeProductCart(product)}>Remove</button>
                                 </Col>
                             )
                         })}

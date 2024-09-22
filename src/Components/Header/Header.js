@@ -7,8 +7,14 @@ import Form from 'react-bootstrap/Form';
 import { CiShoppingCart } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 import './Header.scss';
+import { useCart } from '../../Context/CartContext';
 
 const Header  = () => {
+    const {cart, dispatch } = useCart();
+
+    console.log('Header', cart.length)
+
+
     return(
         <>
             <header className="app-header">
@@ -32,6 +38,7 @@ const Header  = () => {
                                 <ul className='icon-list'>
                                     <li>
                                         <CiShoppingCart />
+                                        <span className='badge'>{cart.length} </span>
                                     </li>
                                 </ul>
                             </div>
