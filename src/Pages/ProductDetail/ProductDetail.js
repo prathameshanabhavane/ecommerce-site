@@ -20,6 +20,10 @@ const ProductDetail = () => {
             .catch(err =>setError(err))
     }, [])
 
+    const addToCart = (id) => {
+        console.log('cart', id);
+    }
+
     console.log(productDeatil);
 
     return(
@@ -55,6 +59,7 @@ const ProductDetail = () => {
                                     </svg>
                                     {/* <span>({rating.count})</span> */}
                                 </div>
+                                 <button onClick={() => {addToCart(id)}}>Add To Cart</button>
                             </div>
                         </div>
                     </Container>
