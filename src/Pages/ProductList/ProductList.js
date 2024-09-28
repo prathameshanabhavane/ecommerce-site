@@ -2,36 +2,26 @@ import { ShimmerSimpleGallery } from "react-shimmer-effects";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './Home.scss';
+import './ProductList.scss';
 import Products from '../../Components/Products/Products';
 import Categories from '../../Components/Categories/Categories';
 import ServiceFatures from '../../Components/ServiceFeatures/ServiceFatures';
-import Banner from "../../Components/Banner/Banner";
-// import axios from 'axios';
 import { useState,  useEffect } from 'react';
 
-const Home = () => {
+const ProductList = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products?limit=8')
+        fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
             .then(data=>setProducts(data) )
     }, [])
 
     return(
         <>
-            <div className="home-page page">
-                <Banner />
+            <div className="product-page page">
                 <Container>
-                    <section className='category-section'>
-                        <h2 className='section-title'>Browse By Category</h2>
-                        <Row>
-                            <Categories />
-                        </Row>
-                    </section>
                     <section className='latest-product'>
-                        <h2 className='section-title'>Latest Products</h2>
                         <Row>
                             
                             { products.length == 0 ? 
@@ -45,15 +35,10 @@ const Home = () => {
                             })}
                         </Row>
                     </section>
-                    <section className='services-section'>
-                        <Row>
-                            <ServiceFatures />
-                        </Row>
-                    </section>
                 </Container>
             </div>
         </>
     )
 }
 
-export default Home;
+export default ProductList;

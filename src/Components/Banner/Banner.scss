@@ -1,0 +1,28 @@
+.banner-section {
+    margin-bottom: 50px;
+
+    img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .swiper-button-prev:after, 
+    .swiper-button-next:after {
+        color: var(--color-1);
+    }
+
+    .swiper-pagination-bullet-active {
+        background: var(--color-1);
+    }
+}
+
+@media(max-width: 767px) {
+    .banner-section {
+        margin-bottom: 40px;
+    
+        img {
+            height: 200px;
+        }
+    }
+}
