@@ -8,6 +8,10 @@ import ProductDetail from "./Pages/ProductDetail/ProductDetail";
 import Cart from "./Pages/Cart/Cart";
 import CheckoutDetail from "./Pages/CheckoutDetail/CheckoutDetail";
 import ProductCategory from "./Pages/ProductCategory/ProductCategory";
+import About from "./Pages/About/About";
+import Contact from "./Pages/Contact/Contact";
+import TermsOfServices from "./Pages/TermsOfServices/TermsOfServices";
+import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 import Error from "./Components/Error/Error";
 
 function App() {
@@ -22,6 +26,10 @@ function App() {
             <Route path="/product/category/:category" element={<ProductCategory />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout-detail" element={<CheckoutDetail />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/terms-of-services" element={<TermsOfServices />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path='*' element={<Error />} />
         </Routes>
       </div>

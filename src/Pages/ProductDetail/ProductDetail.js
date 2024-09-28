@@ -5,10 +5,13 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import './ProductDetail.scss';
 import { useCart } from '../../Context/CartContext';
+import Products from '../../Components/Products/Products';
+import { ShimmerSimpleGallery } from "react-shimmer-effects";
 
 const ProductDetail = () => {
     let { id } = useParams();
     const [productDeatil, setProductDeatil] = useState([])
+    const [relatedCategoryProducts, setRelatedCategoryProducts] = useState([])
     const [error, setError] = useState('');
     const navigate = useNavigate();
     const { dispatch } = useCart();
@@ -26,6 +29,12 @@ const ProductDetail = () => {
             .then(data=>setProductDeatil(data))
             .catch(err =>setError(err))
     }, [id])
+
+    useEffect(() => {
+        fetch(`https://fakestoreapi.com/products/category/${category}?limit=4`)
+        .then(res=>res.json())
+        .then(data=>setRelatedCategoryProducts(data))
+    }, [category])
 
     // const addToCart = (id, product) => {
     //     console.log('cart', id);
@@ -78,6 +87,22 @@ const ProductDetail = () => {
                             </div>
                         </div>
                     </Container>
+                        <section>
+                            <Container>
+                                <h2 className='section-title'>Related Products</h2>
+                                <Row>
+                                    { relatedCategoryProducts.length == 0 ? 
+                                    <ShimmerSimpleGallery row={2} col={4} card imageHeight={300} caption /> :
+                                    relatedCategoryProducts.map(product => {
+                                        return(
+                                            <Col key={product.id} sm={6} md={4} lg={3}>
+                                                <Products product={product} />
+                                            </Col>
+                                        )
+                                    })}
+                                </Row>    
+                        </Container>
+                    </section>
                 </div>
             )}
         </>

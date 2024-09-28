@@ -34,3 +34,22 @@ code {
   text-transform: capitalize;
   margin-bottom: 30px;
 }
+
+.static-page {
+  h1, h2, h3 {
+      color: var(--color-1);
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+}

@@ -46,7 +46,7 @@ const Cart = () => {
 
     return(
         <>
-            <div className="home-page page">
+            <div className="cart-page page">
                 <Container>
                     <Row>
                         <Col sm={12} md={8} lg={8}>

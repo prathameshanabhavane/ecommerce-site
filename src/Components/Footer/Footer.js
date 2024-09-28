@@ -12,23 +12,28 @@ const Footer  = () => {
                 <Container>
                         <div className='footer-wrap'>
                             <div className='f-logo f-grid'>
-                                <Link>Footer Logo</Link>
+                                <Link>Dukan</Link>
                             </div>
                             <div className='f-grid'>
                                 <h3>Quick Links</h3>
                                 <ul>
                                     <li>
-                                        <Link>
+                                        <Link to="/about">
                                             About Us
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link>
+                                        <Link to="/contact">
                                             Contact Us
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link>
+                                        <Link to="/privacy-policy">
+                                            Privacy Policy
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/terms-of-services">
                                             Terms of Services
                                         </Link>
                                     </li>

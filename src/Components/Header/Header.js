@@ -20,7 +20,7 @@ const Header  = () => {
             <header className="app-header">
                     <div className='container'>
                         <div className='header-wrapper'>
-                            <h1><Link to="/">Ecommerce</Link></h1>
+                            <h1><Link to="/">Dukan</Link></h1>
                             <div className='menu-wrap'>
                                 <nav>
                                     <ul className='menu-list'>
