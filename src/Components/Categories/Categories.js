@@ -16,7 +16,7 @@ const Categories = () => {
     return(
         <>
             { categories.length == 0 ? 
-            <ShimmerSimpleGallery row={1} col={4} card imageHeight={250} /> :
+            <ShimmerSimpleGallery row={1} col={4} card imageHeight={150} /> :
             categories.map((category) => {
                 return(
                     <Col key={category} className="category-grid" sm={6} md={3}>

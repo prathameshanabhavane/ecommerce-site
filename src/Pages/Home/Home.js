@@ -1,7 +1,7 @@
+import { ShimmerSimpleGallery } from "react-shimmer-effects";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { ShimmerSimpleGallery } from "react-shimmer-effects";
 import './Home.scss';
 import Products from '../../Components/Products/Products';
 import Categories from '../../Components/Categories/Categories';

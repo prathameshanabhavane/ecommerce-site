@@ -1,3 +1,4 @@
+import { ShimmerSimpleGallery } from "react-shimmer-effects";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Container from 'react-bootstrap/Container';
@@ -22,7 +23,9 @@ const ProductCategory = () => {
             <div className="category-page page">
                 <Container>
                     <Row>
-                        {products.map(product => {
+                        { products.length == 0 ? 
+                        <ShimmerSimpleGallery row={2} col={4} card imageHeight={300} caption /> :
+                        products.map(product => {
                             return(
                                 <Col key={product.id} sm={6} md={4} lg={3}>
                                     <Products product={product} />
