@@ -1,8 +1,10 @@
 import './CheckoutDetail.scss'
 import { useForm, SubmitHandler } from "react-hook-form"
+import { useCart } from '../../Context/CartContext';
 
 const CheckoutDetail = () => {
     const { register, handleSubmit, formState: {errors} } = useForm()
+    const { cart, dispatch } = useCart();
 
     return(
         <>
@@ -11,6 +13,8 @@ const CheckoutDetail = () => {
                     <form onSubmit={handleSubmit((data, e) => {
                             console.log(data)
                             e.target.reset()
+                            console.log(cart);
+                            dispatch({ type: 'CLEAR_CART' });
                         })}>
                         <div className="input-field">
                             <input type="text" {...register("name", {required:"Name field is required"})} placeholder="Name" />

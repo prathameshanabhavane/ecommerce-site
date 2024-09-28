@@ -12,6 +12,8 @@ const cartReducer = (state, action) => {
             return [...state, action.payload];
         case 'REMOVE_FROM_CART':
             return state.filter(item => item.id !== action.payload.id);
+        case 'CLEAR_CART':
+            return [];
         default:
             return state;
     }
@@ -19,7 +21,6 @@ const cartReducer = (state, action) => {
 
 export const CartProvider = ({ children }) => {
     const [cart, dispatch] = useReducer(cartReducer, []);
-    // console.log(cart);
 
     return (
         <CartContext.Provider value={{ cart, dispatch }}>

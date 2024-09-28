@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { ShimmerSimpleGallery } from "react-shimmer-effects";
 import './Home.scss';
 import Products from '../../Components/Products/Products';
 import Categories from '../../Components/Categories/Categories';
@@ -30,7 +31,10 @@ const Home = () => {
                     <section className='latest-product'>
                         <h2 className='section-title'>Latest Products</h2>
                         <Row>
-                            {products.map(product => {
+                            
+                            { products.length == 0 ? 
+                            <ShimmerSimpleGallery row={5} col={4} card imageHeight={300} caption /> : 
+                            products.map(product => {
                                 return(
                                     <Col key={product.id} sm={6} md={4} lg={3}>
                                         <Products product={product} />

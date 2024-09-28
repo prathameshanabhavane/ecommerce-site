@@ -1,3 +1,4 @@
+import { ShimmerSimpleGallery } from "react-shimmer-effects";
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import Col from 'react-bootstrap/Col';
@@ -14,7 +15,9 @@ const Categories = () => {
 
     return(
         <>
-            {categories.map((category) => {
+            { categories.length == 0 ? 
+            <ShimmerSimpleGallery row={1} col={4} card imageHeight={250} /> :
+            categories.map((category) => {
                 return(
                     <Col key={category} className="category-grid" sm={6} md={3}>
                         <Link to={`/product/category/${category}`} key={category} className="category-inner">
