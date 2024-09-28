@@ -17,6 +17,7 @@ code {
     --color-2: #fff;
     --color-3: #F5F5F5;
     --color-4: #DB4444;
+    --color-5: #f7f7f7;
 }
 
 .page {
@@ -25,4 +26,10 @@ code {
 
 .main {
   min-height: calc(100vh - 102px);
+}
+
+.section-title {
+  font-size: 24px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
 }

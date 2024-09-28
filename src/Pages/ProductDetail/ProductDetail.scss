@@ -30,6 +30,9 @@
         font-size: 22px;
         font-weight: 500;
         color: var(--color-1);
+        display: block;
+        overflow: inherit;
+        height: auto;
     }
 
     h3 {

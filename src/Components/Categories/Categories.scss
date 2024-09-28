@@ -1,0 +1,32 @@
+.category-grid {
+    text-align: center;
+    
+    .category-inner {
+        display: block;
+        background-color: var(--color-5);
+        transition: all 0.3s;
+        padding: 20px;
+
+        &:hover {
+            background-color: var(--color-4);
+        }
+    }
+
+    .icon {
+        img {
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    h2 {
+        font-size: 20px;
+        color: var(--color-1);
+        text-transform: capitalize;
+        margin-top: 15px;
+    }
+}

@@ -13,6 +13,9 @@ const Products = ({product}) => {
                         <img src={image} alt={title} />
                     </figure>
                     <div className='p-info'>
+                        <h6>
+                            {category}
+                        </h6>
                         <h2>
                             {title}
                         </h2>

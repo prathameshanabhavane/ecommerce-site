@@ -33,6 +33,13 @@
         color: var(--color-4);
     }
 
+    h6 {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--color-4);
+        text-transform: capitalize;
+    }
+
     .ratings {
         display: flex;
         align-items: center;
