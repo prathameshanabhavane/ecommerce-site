@@ -16,7 +16,7 @@ const Categories = () => {
         <>
             {categories.map((category) => {
                 return(
-                    <Col className="category-grid" sm={2} md={3}>
+                    <Col key={category} className="category-grid" sm={6} md={3}>
                         <Link to={`/product/category/${category}`} key={category} className="category-inner">
                             <div className="icon">
                                 <img src={`${process.env.PUBLIC_URL}/img/${category}.png`} />

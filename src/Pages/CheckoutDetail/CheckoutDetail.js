@@ -4,8 +4,6 @@ import { useForm, SubmitHandler } from "react-hook-form"
 const CheckoutDetail = () => {
     const { register, handleSubmit, formState: {errors} } = useForm()
 
-    console.log(errors)
-
     return(
         <>
             <div className="checkout-detail-page page">

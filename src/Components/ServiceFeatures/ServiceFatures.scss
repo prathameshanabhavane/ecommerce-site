@@ -1,0 +1,29 @@
+.services {
+    text-align: center;
+    margin-bottom: 30px;
+
+    h2 {
+        font-size: 20px;
+        color: var(--color-1);
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 14px;
+        color: var(--color-1);
+    }
+}
+
+@media(max-width: 900px) {
+    .services {
+    
+        h2 {
+            font-size: 16px;
+        }
+    
+        p {
+            font-size: 14px;
+        }
+    }
+}

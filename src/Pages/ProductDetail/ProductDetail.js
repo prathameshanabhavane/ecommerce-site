@@ -15,7 +15,7 @@ const ProductDetail = () => {
 
     // console.log('useCart', dispatch)
 
-    console.log(navigate);
+    // console.log(navigate);
 
     const { title, image, price, rating, category, description} = productDeatil;
 

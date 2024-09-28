@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import './Home.scss';
 import Products from '../../Components/Products/Products';
 import Categories from '../../Components/Categories/Categories';
+import ServiceFatures from '../../Components/ServiceFeatures/ServiceFatures';
 // import axios from 'axios';
 import { useState,  useEffect } from 'react';
 
@@ -36,6 +37,11 @@ const Home = () => {
                                     </Col>
                                 )
                             })}
+                        </Row>
+                    </section>
+                    <section className='services-section'>
+                        <Row>
+                            <ServiceFatures />
                         </Row>
                     </section>
                 </Container>

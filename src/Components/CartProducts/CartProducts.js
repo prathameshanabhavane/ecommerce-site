@@ -1,16 +1,18 @@
 import { Link } from 'react-router-dom';
-import './Products.scss';
+import './CartProducts.scss';
 
-const Products = ({product}) => {
+const CartProducts = ({product, removeProductFromCart}) => {
+    console.log(product);
     const {id, title, image, price, rating, category, description} = product;
 
     return(
-        <>
-            <Link className='p-link' to={`/product/${id}`}>
-                <div className='products'>
-                    <figure>
-                        <img src={image} alt={title} />
-                    </figure>
+        <>  <div className='p-link'>
+                <div className='cart-products'>
+                    <Link to={`/product/${id}`}>
+                        <figure>
+                            <img src={image} alt={title} />
+                        </figure>
+                    </Link>
                     <div className='p-info'>
                         <h6>
                             {category}
@@ -32,10 +34,15 @@ const Products = ({product}) => {
                             {/* <span>({rating.count})</span> */}
                         </div>
                     </div>
+                    <button className='delete-icon' onClick={() => removeProductFromCart(product)}>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 5.57143H5.33333L6.66667 21H17.3333L18.6667 5.57143H4M12 9.42857V17.1429M15.3333 9.42857L14.6667 17.1429M8.66667 9.42857L9.33333 17.1429M9.33333 5.57143L10 3H14L14.6667 5.57143" stroke="black" strokeWidth="1.56" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                    </button>
                 </div>
-            </Link>
+            </div>
         </>
     )
 }
 
-export default Products;
+export default CartProducts;
