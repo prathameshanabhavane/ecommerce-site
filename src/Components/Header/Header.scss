@@ -2,6 +2,11 @@
     box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
     background-color: var(--color2);
     padding: 15px 0;
+    position: relative;
+    
+    .container {
+        position: relative;
+    }
 
     h1 {
         font-size: 20px;
@@ -75,4 +80,32 @@
         right: 5px;
     }
 
+    .search-icon-li {
+        display: none;
+    }
+}
+
+.cross-icon {
+    fill: none; stroke: rgb(0, 0, 0); 
+    stroke-linecap: round; 
+    stroke-linejoin: round; 
+    stroke-width: 2;
+}
+
+@media(max-width: 600px) {
+    .app-header {
+        ul {
+            li {
+                padding: 0 5px;
+
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .search-icon-li {
+            display: inline-block;
+        }
+    }
 }

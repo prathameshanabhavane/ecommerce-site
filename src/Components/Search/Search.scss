@@ -1,0 +1,116 @@
+.search {
+    position: relative;
+
+    input {
+        height: 40px;
+        width: 400px;
+        padding: 5px 10px;
+        outline: none;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+        font-size: 16px;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        padding-right: 40px;
+        background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M20%2020L16.2223%2016.2156M18.3158%2011.1579C18.3158%2013.0563%2017.5617%2014.8769%2016.2193%2016.2193C14.8769%2017.5617%2013.0563%2018.3158%2011.1579%2018.3158C9.2595%2018.3158%207.43886%2017.5617%206.0965%2016.2193C4.75413%2014.8769%204%2013.0563%204%2011.1579C4%209.2595%204.75413%207.43886%206.0965%206.0965C7.43886%204.75413%209.2595%204%2011.1579%204C13.0563%204%2014.8769%204.75413%2016.2193%206.0965C17.5617%207.43886%2018.3158%209.2595%2018.3158%2011.1579V11.1579Z%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat;
+        background-position: 97% 50%;
+      }
+      
+      ul {
+        list-style: none;
+        background: #fff;
+        box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
+        width: 420px;
+        margin: 12px auto;
+        padding: 0;
+        max-height: 300px;
+        overflow-y: scroll;
+        display: block;
+        position: absolute;
+        z-index: 9;
+      
+        &::-webkit-scrollbar {
+          width: 5px;
+        }
+      
+        &::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+      
+        &::-webkit-scrollbar-thumb {
+          background: #888;
+        }
+      
+        &::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+      
+        li {
+            padding: 0;
+            text-align: left;
+            border: 1px solid #f7f7f7;
+            cursor: pointer;
+            transition: all 0.3s;
+
+          a {
+            display: block;
+            padding: 8px 20px;
+          }
+      
+          &:first-child {
+            background-color: #000;
+            color: #fff;
+          }
+      
+          &:hover {
+            background-color: #000;
+            color: #fff;
+          }
+        }
+      }
+      
+}
+
+.search-active {
+    display: block !important;
+}
+  
+@media(max-width: 1000px) {
+    .search {
+        input { 
+            width: 300px;
+        }
+        ul { 
+            width: 320px;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .search-wrapp {
+        position: absolute;
+        top: 44px;
+        right: 0;
+        width: 100%;
+        padding: 0 12px;
+        z-index: 9;
+        display: none;
+    }
+
+    .search {
+        input,
+        ul {
+            width: 100%;
+        }
+
+        input {
+            box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
+        }
+
+        ul {
+            margin: 0 auto;
+        }
+    }
+}
