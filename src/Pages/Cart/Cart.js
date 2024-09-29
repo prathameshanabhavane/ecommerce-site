@@ -13,11 +13,16 @@ const Cart = () => {
     const { cart, dispatch } = useCart();
     const [discount, setDiscount] = useState(5);
     const [orderTotal, setOrderTotal] = useState(0);
+    const [quantity, setQuantity] = useState(1);
 
-    // console.log('cartProduct', cart)
+    console.log('cartProduct', cart)
 
     useEffect(() => {
-        const getBagTotal = cart.reduce((acc, cart) => acc += cart.price, 0)
+        const getBagTotal = cart.reduce((acc, cart) => {
+            let getTotal = acc += cart.price;
+            let getFinalTotal = getTotal * cart.quantity;
+            return getFinalTotal;
+        }, 0)
         setBagTotal(getBagTotal);
     }, [cart])
 
@@ -31,6 +36,14 @@ const Cart = () => {
     const removeProductFromCart = (item) => {
         dispatch({ type: 'REMOVE_FROM_CART', payload: item });
     };
+
+    const increaseQuantity = (id) => {
+        dispatch({ type: 'INCREASE_QUANTITY', payload: { id } });
+    }
+
+    const decreaseQuantity = (id) => {
+        dispatch({ type: 'DECREASE_QUANTITY', payload: { id } });
+    }
 
     if(cart.length == 0) {
         return(
@@ -52,7 +65,14 @@ const Cart = () => {
                         <Col sm={12} md={8} lg={8}>
                             {cart.map(product => {
                                     return(
-                                        <CartProducts key={product.id} product={product} removeProductFromCart={removeProductFromCart} />
+                                        <CartProducts 
+                                            key={product.id} 
+                                            product={product} 
+                                            removeProductFromCart={removeProductFromCart} 
+                                            quantity={product.quantity}
+                                            increaseQuantity={increaseQuantity} 
+                                            decreaseQuantity={decreaseQuantity}
+                                        />
                                     )
                                 })}
                             </Col>
