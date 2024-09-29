@@ -8,6 +8,14 @@
         padding: 30px 0;
     }
 
+    .f-logo {
+        a {
+            font-size: 24px;
+            color: var(--color2);
+            text-decoration: none;
+        }
+    }
+
     .f-grid {
         flex: 0 0 33.33%;
         max-width: 33.33%;

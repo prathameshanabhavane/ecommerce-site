@@ -1,10 +1,12 @@
 import './CheckoutDetail.scss'
 import { useForm, SubmitHandler } from "react-hook-form"
 import { useCart } from '../../Context/CartContext';
+import { useNavigate } from 'react-router-dom';
 
 const CheckoutDetail = () => {
     const { register, handleSubmit, formState: {errors} } = useForm()
     const { cart, dispatch } = useCart();
+    const navigate = useNavigate();
 
     return(
         <>
@@ -15,6 +17,7 @@ const CheckoutDetail = () => {
                             e.target.reset()
                             console.log(cart);
                             dispatch({ type: 'CLEAR_CART' });
+                            navigate('/order-placed');
                         })}>
                         <div className="input-field">
                             <input type="text" {...register("name", {required:"Name field is required"})} placeholder="Name" />
@@ -33,7 +36,7 @@ const CheckoutDetail = () => {
                             <span className='error'>{errors.address?.message}</span>
                         </div>
                         <div className="input-field">
-                            <input type="submit" value="Submit" />
+                            <input type="submit" value="Submit" className='submit' />
                         </div>
                     </form>
                 </div>
