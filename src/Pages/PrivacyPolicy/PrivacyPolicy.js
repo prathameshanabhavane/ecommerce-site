@@ -7,10 +7,10 @@ const PrivacyPolicy = () => {
         <>
            <div className='privacy-page page static-page'>
                 <section>
+                    <h1 className='page-header'>
+                        Privacy Policy
+                    </h1>
                     <Container>
-                        <h1>
-                            Privacy Policy
-                        </h1>
                         <section>
                             <p>Dukan takes your privacy very seriously. This Privacy Policy explains how Dukan collects, uses, and discloses information, and your choices for managing your information preferences.</p>
                             <p>This Privacy Policy describes Dukan’s data practices associated with our website (dukan.com) and Dukan services ("Services"), and the choices that Dukan provides in connection with our collection and use of your information...</p>

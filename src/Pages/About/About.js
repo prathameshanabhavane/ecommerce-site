@@ -7,10 +7,10 @@ const About = () => {
         <>
            <div className='about-page page static-page'>
                 <section>
+                    <h1 className='page-header'>
+                        About Us
+                    </h1>
                     <Container>
-                        <h1>
-                            About Us
-                        </h1>
                         <section>
                             <h2>Our Mission</h2>
                             <p>Dukan is dedicated to empowering small businesses and individual entrepreneurs by providing them with the tools and resources they need to succeed in the digital marketplace. Our mission is to create a seamless, user-friendly experience that enables our users to reach their goals efficiently.</p>

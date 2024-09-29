@@ -53,3 +53,28 @@ code {
   }
 
 }
+
+.static-page {
+  padding: 0;
+
+  .page-header {
+      padding: 50px 0;
+      border: 1px solid #eee;
+      background-color: #fafafa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+      font-size: 40px;
+  }
+}
+
+@media(max-width: 767px) {
+  .static-page {
+    .page-header {
+          padding: 40px 0;
+          margin-bottom: 30px;
+          font-size: 30px;
+      }
+  }
+}

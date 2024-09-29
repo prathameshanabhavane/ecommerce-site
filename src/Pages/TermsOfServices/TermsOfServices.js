@@ -7,10 +7,10 @@ const TermsOfServices = () => {
         <>
            <div className='terms-page page static-page'>
                 <section>
+                    <h1 className='page-header'>
+                        Terms Of Services
+                    </h1>
                     <Container>
-                        <h1>
-                            Terms Of Services
-                        </h1>
                         <section>
                             <h2>1. Acceptance of Terms</h2>
                             <p>By accessing and using Dukan’s services, you agree to comply with and be bound by these Terms of Service. If you do not agree with any part of these terms, you must not use our services.</p>
