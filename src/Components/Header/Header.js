@@ -40,12 +40,14 @@ const Header  = () => {
                                         <li>
                                             <Link to="/products">Products</Link>
                                         </li>
+                                        <li>
+                                            <Link to="/cart">Cart</Link>
+                                        </li>
                                     </ul>
                                 </nav>
                                 <ul className='icon-list'>
                                     <li>
                                        <Link to="/cart">
-                                            Cart
                                             <span>
                                                 <CiShoppingCart />
                                                 <span className='badge'>{cart.length} </span>
