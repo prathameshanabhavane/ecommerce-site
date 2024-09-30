@@ -18,13 +18,17 @@ const ProductCategory = () => {
             .then(data=>setProducts(data))
     }, [currentCateogry])
 
+    const shimmerComponent = window.matchMedia("(max-width: 600px)").matches ? 
+        <ShimmerSimpleGallery row={1} col={1} card imageHeight={300} caption /> : 
+        <ShimmerSimpleGallery row={2} col={4} card imageHeight={300} caption /> ;
+
     return(
         <>
             <div className="category-page page">
                 <Container>
                     <Row>
                         { products.length == 0 ? 
-                        <ShimmerSimpleGallery row={2} col={4} card imageHeight={300} caption /> :
+                        shimmerComponent :
                         products.map(product => {
                             return(
                                 <Col key={product.id} sm={6} md={4} lg={3}>

@@ -13,10 +13,14 @@ const Categories = () => {
             .then(data=>setCategories(data))
     }, [])
 
+    const shimmerComponent = window.matchMedia("(max-width: 600px)").matches ? 
+        <ShimmerSimpleGallery row={4} col={1} card imageHeight={150} /> : 
+        <ShimmerSimpleGallery row={1} col={4} card imageHeight={150} /> ; 
+
     return(
         <>
             { categories.length == 0 ? 
-            <ShimmerSimpleGallery row={1} col={4} card imageHeight={150} /> :
+            shimmerComponent :
             categories.map((category) => {
                 return(
                     <Col key={category} className="category-grid" sm={6} md={3}>
