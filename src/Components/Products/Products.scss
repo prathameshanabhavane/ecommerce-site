@@ -49,3 +49,13 @@
     text-decoration: none;  
     margin-bottom: 30px;
 }
+
+@media(max-width: 767px) {
+    .products {
+        figure,
+        .p-info {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
