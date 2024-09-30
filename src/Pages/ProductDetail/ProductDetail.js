@@ -8,6 +8,7 @@ import { useCart } from '../../Context/CartContext';
 import Products from '../../Components/Products/Products';
 import { ShimmerSimpleGallery } from "react-shimmer-effects";
 import Ratings from '../../Components/Ratings/Ratings';
+import BaseComponent from '../../Components/BaseComponent/BaseComponent';
 
 const ProductDetail = () => {
     let { id } = useParams();
@@ -89,9 +90,9 @@ const ProductDetail = () => {
                             </div>
                         </div>
                     </Container>
-                        <section>
-                            <Container>
-                                <h2 className='section-title'>Related Products</h2>
+                    <section>
+                        <Container>
+                            <h2 className='section-title'>Related Products</h2>
                                 <Row>
                                     { relatedCategoryProducts.length == 0 ? 
                                     shimmerComponent :
@@ -103,6 +104,11 @@ const ProductDetail = () => {
                                         )
                                     })}
                                 </Row>    
+                        </Container>
+                    </section>
+                    <section>
+                        <Container>
+                            <BaseComponent />
                         </Container>
                     </section>
                 </div>

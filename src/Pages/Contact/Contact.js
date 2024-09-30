@@ -1,5 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import { useForm } from "react-hook-form"
+import './Contact.scss';
 
 const Contact = () => {
     const { register, handleSubmit, formState: {errors} } = useForm()

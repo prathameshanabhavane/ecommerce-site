@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Products from "../../Components/Products/Products";
+import BaseComponent from "../../Components/BaseComponent/BaseComponent";
 
 const ProductCategory = () => {
     const [products, setProducts] = useState([]);
@@ -37,6 +38,7 @@ const ProductCategory = () => {
                             )
                         })}
                     </Row>
+                    <BaseComponent />
                 </Container>
             </div>
         </>

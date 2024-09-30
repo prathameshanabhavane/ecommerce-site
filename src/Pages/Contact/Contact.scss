@@ -1,6 +1,11 @@
 .contact-page {
     padding: 0;
 
+    .form-detail {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
     h1 {
         padding: 50px 0;
         border: 1px solid #eee;

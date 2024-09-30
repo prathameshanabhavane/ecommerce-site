@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import './ProductList.scss';
 import Products from '../../Components/Products/Products';
 import { useState,  useEffect } from 'react';
+import BaseComponent from "../../Components/BaseComponent/BaseComponent";
 
 
 const ProductList = () => {
@@ -38,6 +39,7 @@ const ProductList = () => {
                             })}
                         </Row>
                     </section>
+                    <BaseComponent />
                 </Container>
             </div>
         </>
