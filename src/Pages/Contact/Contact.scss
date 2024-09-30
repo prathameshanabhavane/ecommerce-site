@@ -1,0 +1,24 @@
+.contact-page {
+    padding: 0;
+
+    h1 {
+        padding: 50px 0;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 767px) {
+    .contact-page {
+        h1 {
+            padding: 40px 0;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+    }
+}

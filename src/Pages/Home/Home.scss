@@ -3,11 +3,27 @@
 }
 
 .latest-product {
-    padding: 40px 0;
+    padding: 40px 0 30px;
 }
 
 .services-section {
     padding: 30px 0 60px;
+}
+
+.banner-tv-section {
+    padding-bottom: 40px;
+    overflow: hidden;
+
+    img {
+        height: auto;
+        width: 100%;
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.01);
+        }
+
+    }
 }
 
 @media(max-width: 767px) {

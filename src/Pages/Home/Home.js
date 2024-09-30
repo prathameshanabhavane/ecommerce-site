@@ -9,6 +9,7 @@ import ServiceFatures from '../../Components/ServiceFeatures/ServiceFatures';
 import Banner from "../../Components/Banner/Banner";
 // import axios from 'axios';
 import { useState,  useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const [products, setProducts] = useState([])
@@ -44,6 +45,11 @@ const Home = () => {
                                 )
                             })}
                         </Row>
+                    </section>
+                    <section className="banner-tv-section">
+                        <Link to="/product/14"> 
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/TVs/Nireeksh/AugART23/samsung_banner.jpg" alt="banner image" />
+                        </Link>
                     </section>
                     <section className='services-section'>
                         <Row>

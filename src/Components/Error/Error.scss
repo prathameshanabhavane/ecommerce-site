@@ -1,0 +1,42 @@
+.error-page {
+    text-align: center;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 370px);
+
+    h1 {
+        font-size: 44px;
+    }
+
+    p {
+        margin: 20px 0 30px;
+    }
+
+    a {
+        display: inline-block;
+        background-color: var(--color-4);
+        border: 1px solid var(--color-4);
+        color: var(--color-2);
+        font-size: 20px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s;
+        padding: 10px 30px;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: var(--color-6);
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .error-page {
+        p {
+            margin: 20px auto 30px;
+            max-width: 225px;
+        }
+    }
+}
