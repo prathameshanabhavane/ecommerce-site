@@ -130,3 +130,19 @@
         }
     }
 }
+
+@media(max-width: 576px) {
+    .cart-products { 
+        .products {
+            figure {
+                height: 150px !important;
+                width: 150px !important;
+            }
+        } 
+
+        h2 {
+            display: block;
+            height: auto;
+        }
+    }
+}

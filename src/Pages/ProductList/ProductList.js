@@ -25,7 +25,7 @@ const ProductList = () => {
         <>
             <div className="product-page page">
                 <Container>
-                    <section className='latest-product'>
+                    <section className='pg-product'>
                         <Row>
                             
                             { products.length == 0 ? 

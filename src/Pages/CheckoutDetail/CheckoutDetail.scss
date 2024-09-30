@@ -107,3 +107,21 @@
         }
     }
 }
+
+.checkout-detail-page {
+    .order-details {
+        margin-bottom: 20px;
+        
+        ul {
+            margin-bottom: 10px;
+        }
+
+        li {
+            &:last-child {
+                h6 {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

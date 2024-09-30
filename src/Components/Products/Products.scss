@@ -59,3 +59,19 @@
         }
     }
 }
+
+@media(max-width: 576px) {
+    .products {
+        figure {
+            height: 180px !important;
+            width: 180px !important;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 18px;
+            display: block;
+            height: auto;
+        }
+    } 
+}

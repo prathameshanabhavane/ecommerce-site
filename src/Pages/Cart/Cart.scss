@@ -112,3 +112,17 @@
         }
     }
 }
+
+.cart-page {
+    .p-info {
+        padding-left: 30px;
+    }
+}
+
+@media(max-width: 767px) {
+    .cart-page {
+        .p-info {
+            padding-left: 0;
+        }
+    }
+}
