@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
 import './CartProducts.scss';
-import { useState } from 'react';
 import Ratings from '../Ratings/Ratings';
 
 const CartProducts = ({product, removeProductFromCart, quantity, increaseQuantity, decreaseQuantity}) => {
     // console.log(product);
-    const {id, title, image, price, rating, category, description} = product;
+    const {id, title, image, price, rating, category} = product;
 
     return(
         <>  <div className='p-link'>

@@ -8,7 +8,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Cart.scss';
 
 const Cart = () => {
-    const [products, setProducts] = useState([])
     const [bagTotal, setBagTotal] = useState(0);
     const { cart, dispatch } = useCart();
     const [discount, setDiscount] = useState(5);

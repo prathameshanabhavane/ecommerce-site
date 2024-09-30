@@ -19,7 +19,7 @@ const Categories = () => {
 
     return(
         <>
-            { categories.length == 0 ? 
+            { categories.length === 0 ? 
             shimmerComponent :
             categories.map((category) => {
                 return(

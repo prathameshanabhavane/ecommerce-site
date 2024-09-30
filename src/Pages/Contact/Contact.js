@@ -1,7 +1,5 @@
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { useForm, SubmitHandler } from "react-hook-form"
+import { useForm } from "react-hook-form"
 
 const Contact = () => {
     const { register, handleSubmit, formState: {errors} } = useForm()

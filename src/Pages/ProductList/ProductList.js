@@ -4,8 +4,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './ProductList.scss';
 import Products from '../../Components/Products/Products';
-import Categories from '../../Components/Categories/Categories';
-import ServiceFatures from '../../Components/ServiceFeatures/ServiceFatures';
 import { useState,  useEffect } from 'react';
 
 
