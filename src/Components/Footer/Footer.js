@@ -52,6 +52,23 @@ const Footer  = () => {
                                     </li>
                                 </ul>
                             </div>
+                            <div className='f-grid s-address'>
+                                <h3>Support</h3>
+                                <ul>
+                                    <li>
+                                        1234 Placeholder Street
+                                        Suite 567
+                                        Faketown, CA 98765
+                                        USA
+                                    </li>
+                                    <li>
+                                        (123) 456-7890
+                                    </li>
+                                    <li>
+                                        contact@example.com
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                 </Container>
                 <div className='copyrights'>
