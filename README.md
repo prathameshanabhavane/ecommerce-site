@@ -1,6 +1,6 @@
 #Demo Link
 
-Vercel : https://ecommerce-site-ivory.vercel.app/
+Vercel : https://dukan-aapl.vercel.app/
 
 # Getting Started with Create React App
 
