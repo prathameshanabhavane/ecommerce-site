@@ -4,7 +4,7 @@ import Ratings from '../Ratings/Ratings';
 
 const Products = ({product}) => {
     const {id, title, image, price, rating, category, description} = product;
-    console.log(product);
+    // console.log(product);
 
     return(
         <>

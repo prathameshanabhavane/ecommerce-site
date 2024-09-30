@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import CartProducts from '../../Components/CartProducts/CartProducts';
 import { useState,  useEffect } from 'react';
 import { useCart } from '../../Context/CartContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Cart.scss';
 
 const Cart = () => {
@@ -13,9 +13,9 @@ const Cart = () => {
     const { cart, dispatch } = useCart();
     const [discount, setDiscount] = useState(5);
     const [orderTotal, setOrderTotal] = useState(0);
-    const [quantity, setQuantity] = useState(1);
+    const navigate = useNavigate();
 
-    console.log('cartProduct', cart)
+    // console.log('cartProduct', cart)
 
     useEffect(() => {
         const getBagTotal = cart.reduce((acc, cart) => {
@@ -31,7 +31,14 @@ const Cart = () => {
         setOrderTotal(getOrderTotal);
     }, [bagTotal])
 
-    console.log('getBagTotal', bagTotal);
+    // console.log('getBagTotal', bagTotal);
+
+    const handleCheckout = () => {
+        // console.log('CHeckout')
+        navigate('/checkout-detail', {
+            state: { bagTotal: bagTotal, discount: discount, orderTotal:orderTotal  }
+        })
+    }
 
     const removeProductFromCart = (item) => {
         dispatch({ type: 'REMOVE_FROM_CART', payload: item });
@@ -98,11 +105,11 @@ const Cart = () => {
                                         <h6>${orderTotal}</h6>
                                     </li>
                                 </ul>
-                                <Link to="/checkout-detail">
-                                    <button className='checkout'>
+                                {/* <Link to="/checkout-detail"> */}
+                                    <button className='checkout' onClick={handleCheckout}>
                                         Proceed to Checkout
                                     </button>
-                                </Link>
+                                {/* </Link> */}
                             </div>
                         </Col>
                     </Row>
