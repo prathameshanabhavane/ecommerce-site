@@ -1,6 +1,6 @@
 #Demo Link
 
-Vercel : https://ecommerce-site-ivory.vercel.app/
+Vercel : https://dukan-aapl.vercel.app/
 
 Netlify Manual : https://66fa8bff768412082a9476a7--dashing-kitsune-c9247d.netlify.app/
 
