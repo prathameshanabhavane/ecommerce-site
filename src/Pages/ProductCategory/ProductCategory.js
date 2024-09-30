@@ -19,7 +19,7 @@ const ProductCategory = () => {
     }, [currentCateogry])
 
     const shimmerComponent = window.matchMedia("(max-width: 600px)").matches ? 
-        <ShimmerSimpleGallery row={1} col={1} card imageHeight={300} caption /> : 
+        <ShimmerSimpleGallery row={4} col={1} card imageHeight={300} caption /> : 
         <ShimmerSimpleGallery row={2} col={4} card imageHeight={300} caption /> ;
 
     return(

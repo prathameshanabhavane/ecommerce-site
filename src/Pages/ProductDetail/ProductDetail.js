@@ -50,6 +50,10 @@ const ProductDetail = () => {
 
     // console.log(productDeatil);
 
+    const shimmerComponent = window.matchMedia("(max-width: 600px)").matches ? 
+        <ShimmerSimpleGallery row={4} col={1} card imageHeight={300} caption /> : 
+        <ShimmerSimpleGallery row={1} col={4} card imageHeight={300} caption /> ;
+
     return(
         <>  
             {error != '' && (
@@ -92,7 +96,7 @@ const ProductDetail = () => {
                                 <h2 className='section-title'>Related Products</h2>
                                 <Row>
                                     { relatedCategoryProducts.length == 0 ? 
-                                    <ShimmerSimpleGallery row={2} col={4} card imageHeight={300} caption /> :
+                                    shimmerComponent :
                                     relatedCategoryProducts.map(product => {
                                         return(
                                             <Col key={product.id} sm={6} md={4} lg={3}>
