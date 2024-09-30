@@ -60,22 +60,21 @@
     .p-info {
         flex: 1;
     }
+}
 
-    .delete-icon {
-        background-color: var(--color-2);
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        position: absolute;
-        right: 0;
-        top: -10px;
-        border: 1px solid var(--color-2);
-        box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-
+.delete-icon {
+    background-color: var(--color-2);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: 1px solid var(--color-2);
+    box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .p-link {
@@ -84,6 +83,7 @@
     padding: 20px;
     text-decoration: none;  
     margin-bottom: 30px;
+    position: relative;
 }
 
 .product-quantity {
