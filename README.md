@@ -8,6 +8,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+### `npm install`
+
+As you clone it, just hit above command in your terminal, So that all dependancies will be install in node_modules folder then you can start below commands...
+
 In the project directory, you can run:
 
 ### `npm start`
