@@ -74,6 +74,11 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
+
+        svg {
+            height: 40px;
+            width: 40px;
+        }
     }
 
 }
