@@ -1,6 +1,8 @@
 #Demo Link
 
-Netlify : https://66fa8bff768412082a9476a7--dashing-kitsune-c9247d.netlify.app/
+Vercel : https://ecommerce-site-ivory.vercel.app/
+
+Netlify Manual : https://66fa8bff768412082a9476a7--dashing-kitsune-c9247d.netlify.app/
 
 # Getting Started with Create React App
 
