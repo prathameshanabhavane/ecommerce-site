@@ -40,15 +40,17 @@ const Header  = () => {
                                         <li>
                                             <Link to="/products">Products</Link>
                                         </li>
-                                        <li>
-                                            <Link to="/cart">Cart</Link>
-                                        </li>
                                     </ul>
                                 </nav>
                                 <ul className='icon-list'>
                                     <li>
-                                        <CiShoppingCart />
-                                        <span className='badge'>{cart.length} </span>
+                                       <Link to="/cart">
+                                            Cart
+                                            <span>
+                                                <CiShoppingCart />
+                                                <span className='badge'>{cart.length} </span>
+                                            </span>
+                                       </Link>
                                     </li>
                                     <li className='search-icon-li'>
                                         <span onClick={handleSearchToggle}>
