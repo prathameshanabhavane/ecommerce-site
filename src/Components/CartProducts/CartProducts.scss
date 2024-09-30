@@ -73,6 +73,10 @@
     border: 1px solid var(--color-2);
     box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
     font-size: 24px;
+    padding: 0 !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .p-link {
